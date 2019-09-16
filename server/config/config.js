@@ -12,7 +12,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // Base de datos
 // ====================
 let local = 'mongodb://localhost:27017/cafe';
-let remota = 'mongodb+srv://ralvarellos69:H4293tS2JN3PJ2Y7@cluster0-alygm.mongodb.net/cafe';
+// let remota = 'mongodb+srv://ralvarellos69:H4293tS2JN3PJ2Y7@cluster0-alygm.mongodb.net/cafe';
+// Guardo la cadena como una variable de entorno en Heroku usando heroku config:set ...
+let remota = process.env.MONGO_URI;
 let urlDB;
 
 if (process.env.NODE_ENV === 'dev') {
