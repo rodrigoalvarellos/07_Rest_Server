@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-
 app.use(bodyParser.json()); // parse application/json
 
 
-//Rutas
-app.use(require('./routes/usuario.route'));
+// Configuracion Global de Rutas
+app.use(require('./routes/index'));
 
 
 

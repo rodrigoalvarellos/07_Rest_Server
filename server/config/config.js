@@ -9,6 +9,16 @@ process.env.PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 // ====================
+// Tokens
+// ====================
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30; // 60seg * 60min * 24hs * 30dias
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
+// heroku config:set SEED="este-es-el-seed-produccion"
+
+
+
+
+// ====================
 // Base de datos
 // ====================
 let local = 'mongodb://localhost:27017/cafe';
